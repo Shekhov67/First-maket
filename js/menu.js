@@ -1,18 +1,10 @@
 'use strict';
-let btnMenu = document.querySelector('.fa-bars');
-let navMenu = document.querySelector('.nav__menu');
-let closeBtn = document.querySelector('.fa-times-circle');
+let menuBtn = document.querySelector('.burger span');
+let menulist = document.querySelector('.menu');
 
-closeBtn.style.display = 'none';
 
-btnMenu.addEventListener('click', function () {
-    navMenu.style.display = 'block';
-    btnMenu.style.visibility = 'hidden';
-    closeBtn.style.display = 'block';
+menuBtn.addEventListener('click', function () {
+    menuBtn.classList.toggle('active');
+    menulist.classList.toggle('animate');
 });
 
-closeBtn.addEventListener('click', function () {
-    navMenu.style.display = 'none';
-    btnMenu.style.visibility = 'visible';
-    closeBtn.style.display = 'none';
-});
